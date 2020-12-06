@@ -1,12 +1,21 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css'; // ES6
+import '../../App.css';
 
+const TextEditor = ({handleContentChange}) => {
 
-const TextEditor = () => {
+    const [content, setContent] = useState('');
+
+    useEffect(()=>{
+        handleContentChange(content)
+    },[content])
+
 
     const handleChange = (value) => {
-        console.log("vallluueee--> ", value)
+        console.log("vallluueee--> ", value);
+        setContent(value)
+        // handleContentChange(value);
     }
 
     const modules = {
@@ -46,7 +55,7 @@ const TextEditor = () => {
     return (
         <div className="App">
             <ReactQuill
-                value=''
+                value={content}
                 theme="snow"
                 onChange={handleChange}
                 modules={modules}

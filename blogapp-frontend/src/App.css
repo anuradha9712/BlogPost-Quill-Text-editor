@@ -4,8 +4,8 @@
   padding: 30px;
   /* text-align: center; */
   /* background-color: #F4ECFB; */
-  /* background: linear-gradient(to right, #FFE0F9, #F4ECFB); */
-  background-color: #FFDEC0;
+  background: linear-gradient(to right, #FFE0F9, #F4ECFB);
+  /* background-color: #FFDEC0; */
 }
 
 .card {
@@ -16,6 +16,13 @@
   padding: 15px;
   width: 100%;
   overflow: hidden;
+  min-height: 150px;
+}
+
+.description{
+  margin-top: 30px !important;
+  justify-content: center;
+  text-align: center;
 }
 
 .ql-toolbar.ql-snow, .ql-container.ql-snow {
@@ -40,6 +47,13 @@ h1 {
   text-align: center;
 }
 
+img{
+  width: 50%;
+}
+
+.para p{
+  /* font-size: 47px; */
+}
 /********* */
 
 .App {

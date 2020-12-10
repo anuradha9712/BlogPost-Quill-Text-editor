@@ -2,20 +2,26 @@ import React, { useState, useEffect } from 'react';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css'; // ES6
 import '../../App.css';
+import Button from '@material-ui/core/Button';
 
-const TextEditor = ({handleContentChange}) => {
+
+const TextEditor = ({ handleContentChange }) => {
 
     const [content, setContent] = useState('');
 
-    useEffect(()=>{
+    useEffect(() => {
         handleContentChange(content)
-    },[content])
+    }, [content])
 
 
     const handleChange = (value) => {
         console.log("vallluueee--> ", value);
         setContent(value)
         // handleContentChange(value);
+    }
+
+    const ClearText = () =>{
+        setContent('');
     }
 
     const modules = {
@@ -54,6 +60,9 @@ const TextEditor = ({handleContentChange}) => {
 
     return (
         <div className="App">
+            {/* <Button className="clearBtn" variant="outlined" color="primary" onClick={()=> ClearText()}>
+                Clear
+            </Button> <br/> <br/> */}
             <ReactQuill
                 value={content}
                 theme="snow"

@@ -39,7 +39,8 @@ function App() {
 
   return (
     <div className="main-div">
-      <h1>Blogger App</h1>
+      <h1 className="title">WordBox</h1>
+      <h3 className="tagline"><i>"Words are free. It's how you use them that may cost you." -KushandWizdom</i></h3>
       <Grid container xs={12} md={12} spacing={2}>
         <Grid item container xs={12} md={6}>
           <TextEditor handleContentChange={handleContentChange} />
@@ -57,25 +58,25 @@ function App() {
       </Grid>
 
       <Grid container xs={12} md={12} spacing={2} className="description"  >
-        <Grid item container xs={12} md={3}>
+        <Grid item container xs={12} md={3} className="itemGrid" >
           <div className="card para ">
             <p>{readingtime(content).minutes + ' ' + 'minutes'}</p>
             <h3>Reading Time</h3>
           </div>
         </Grid>
-        <Grid item container xs={12} md={3}>
+        <Grid item container xs={12} md={3} className="itemGrid">
           <div className="card para">
             <p>{readingtime(content).words + ' ' + 'words'}</p>
             <h3>Words</h3>
           </div>
         </Grid>
-        <Grid item container xs={12} md={3}>
+        <Grid item container xs={12} md={3} className="itemGrid">
           <div className="card para">
             <p>{sentimentScore ? sentimentScore.score : ''}</p>
             <h3>Sentiment Score</h3>
           </div>
         </Grid>
-        <Grid item container xs={12} md={3}>
+        <Grid item container xs={12} md={3} className="itemGrid">
           <div className="card ">
             {sentimentScore.score === 0 ?
               <div>

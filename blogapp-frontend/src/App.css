@@ -64,6 +64,7 @@
   /* color: #FFFFFF; */
   color: #5956E9;
   text-align: center;
+  font-size: 50px;
 }
 
 .tagline {
@@ -89,4 +90,22 @@ img {
 
 .clearBtn{
   float: left;
+}
+
+.footer{
+  margin-top: 80px;
+}
+
+.footerGrid{
+  justify-content: center;
+}
+
+.footerGrid h4{
+  font-size: 25px;
+  text-align: center;
+}
+
+.footerGrid a {
+  padding: 10px 10px;
+  font-size: 30px;
 }

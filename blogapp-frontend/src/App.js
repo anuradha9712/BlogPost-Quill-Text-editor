@@ -9,6 +9,8 @@ import './App.css';
 import positiveGIF from './images/positive.gif';
 import negativeGIF from './images/negative.gif';
 import neutralGIF from './images/neutral.gif';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
 
 const sentiment = new Sentiment();
@@ -98,6 +100,21 @@ function App() {
         </Grid>
 
       </Grid>
+
+      <Grid container xs={12} className="footer" >
+        {/* <div id="footer"> */}
+        <Grid item container xs={12} className="footerGrid">
+         <h4> Made with <span role="img" aria-label="heart"> 💜</span> by Anuradha Aggarwal </h4>
+                <Grid item container xs={12} className="footerGrid" >
+            <a href="https://github.com/anuradha9712"  ><FontAwesomeIcon icon={faGithub} /></a>
+            <a href="https://www.linkedin.com/in/anuradha-aggarwal-4a2751107/"><FontAwesomeIcon icon={faLinkedin} /></a>
+            <a href="https://twitter.com/Anuradh06359394/"><FontAwesomeIcon icon={faTwitter} /></a>
+          </Grid>
+        </Grid>
+
+        {/* </div> */}
+      </Grid>
+
     </div>
   );
 }

@@ -12,7 +12,6 @@ import neutralGIF from './images/neutral.gif';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
-
 const sentiment = new Sentiment();
 
 function App() {

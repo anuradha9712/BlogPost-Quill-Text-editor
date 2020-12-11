@@ -14,6 +14,7 @@ import { faGithub, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-ic
 
 const sentiment = new Sentiment();
 
+
 function App() {
 
   const [content, setContent] = useState('');
@@ -109,6 +110,7 @@ function App() {
             <a href="https://www.linkedin.com/in/anuradha-aggarwal-4a2751107/"><FontAwesomeIcon icon={faLinkedin} /></a>
             <a href="https://twitter.com/Anuradh06359394/"><FontAwesomeIcon icon={faTwitter} /></a>
           </Grid>
+          
         </Grid>
 
         {/* </div> */}
